@@ -1,3 +1,4 @@
-version: 1
-services:
-  - id: "b:YXJpOmNsb3VkOmdyYXBoOjpzZXJ2aWNlLzA3ZWRjMzA4LWVhYzktNDcxNC1iZDdkLTlhZGFjMDJlN2MzMS8yMWNkYTg4Mi05YzFmLTExZjEtYjliYS0xMjJlYmQ0ODczY2Y="
+deployments:
+  services:
+    ids:
+    - b:YXJpOmNsb3VkOmdyYXBoOjpzZXJ2aWNlLzQxODczNDgyLTUzZWUtNDczOC1hYmI1LWFiMzRhNmZlNGNlMC8xYmJlYjkwMi05MGNkLTExZWMtOWZhMi0xMjhiNDI4MTk0MjQ=
