@@ -1,0 +1,33 @@
+name: Deploy mobile-report
+
+on:
+  workflow_dispatch:      # dispara manualmente pelo botão "Run workflow"
+  push:
+    branches: [ main ]    # ou automaticamente a cada push na main
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build app
+        run: echo "Building mobile-report..."
+
+  deploy-staging:
+    name: Deploy to Staging
+    needs: build
+    runs-on: ubuntu-latest
+    environment: staging          # environment sem gate — sobe direto
+    steps:
+      - name: Deploy
+        run: echo "Deploying mobile-report to STAGING..."
+
+  deploy-production:
+    name: Deploy to Production
+    needs: deploy-staging         # só roda depois do staging
+    runs-on: ubuntu-latest
+    environment: production       # environment COM o gate do Jira
+    steps:
+      - name: Deploy
+        run: echo "Deploying mobile-report to PRODUCTION..."
