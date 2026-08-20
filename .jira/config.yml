@@ -5,7 +5,7 @@ deployments:
     sleep: 30 # wait 30 seconds between each poll
     environments: # select the environments you'd like to use with this feature
     - Development
-    - Production
+    - production
   services:
     ids:
     - b:YXJpOmNsb3VkOmdyYXBoOjpzZXJ2aWNlLzA3ZWRjMzA4LWVhYzktNDcxNC1iZDdkLTlhZGFjMDJlN2MzMS8yMWNkYTg4Mi05YzFmLTExZjEtYjliYS0xMjJlYmQ0ODczY2Y=
